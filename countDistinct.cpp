@@ -15,7 +15,7 @@ const int MOD = 1'000'000'007;
 const int N = 2e6+13, M = N;
 
 
-//eg arr[7] = {10, 20, 10, 10, 10, 20, 30}
+//eg arr[7] = {10, 20, 10, 10, 10, 20, 30}  
 
 int countDist1(int arr[], int n){
     int count = 0;  //initialize count as 0
