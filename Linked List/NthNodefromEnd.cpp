@@ -78,7 +78,7 @@ int main(int argc, char const *argv[])
         t = new Node(arr[i]);
         last ->next = t;
         last = t;
-    }
+   
 
     NthNodeFromEndEff(head, 3);
     return 0;
