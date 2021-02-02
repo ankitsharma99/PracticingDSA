@@ -12,26 +12,20 @@ vector<int> PrevGreaterOnLeft(int arr[], int n){
     st.push(arr[0]);
 
     for(int i = 1; i<n; i++){
-        if(st.size() && arr[i] > st.top())
-            v.push_back(-1);
-        
+        if(st.size() && arr[i] < st.top())
+            v.push_back(st.top());
+
         else if(!st.size())
             v.push_back(-1);
 
-        else if(st.size() && arr[i] < st.top())
-        {
-            while(st.top() && arr[i] < st.top()) {
+        else if(st.size() && arr[i] > st.top()) {
+            while(st.size() && arr[i] > st.top())
                 st.pop();
-            }
 
             if(!st.size()) v.push_back(-1);
-
-            else{
-                v.push_back(st.top());
-            }
+            else v.push_back(st.top());
         }
         st.push(arr[i]);
-
     }
     return v;
 }
@@ -52,7 +46,7 @@ int main(int argc, char const *argv[])
     vector<int> val = PrevGreaterOnLeft(arr, n);
 
     for(int i = 0; i<val.size(); i++){
-        cout<<val[i]<<" ";
+        cout<<val[i]<<"\t";
     }
 
 
