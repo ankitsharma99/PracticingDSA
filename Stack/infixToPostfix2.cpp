@@ -44,7 +44,7 @@ string InfixToPostfix(stack<char> s, string infix)
 				s.pop();
 			}
 
-			//If Stack top is empty, pop
+			//If Stack top is Opening Bracket, pop
 			if(s.top()=='(')
 			{
 				s.pop();
