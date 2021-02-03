@@ -27,41 +27,56 @@ string InfixToPostfix(stack<char> s, string infix)
 		if((infix[i] >= 'a' && infix[i] <= 'z')
 		||(infix[i] >= 'A' && infix[i] <= 'Z'))
 		{
-			postfix+=infix[i];
+			postfix+=infix[i];   //Concatenate infix[i] in postfix if the infix char is an Operand
 		}
+
 		else if(infix[i] == '(')
 		{
 			s.push(infix[i]);
 		}
 		else if(infix[i] == ')')
 		{
+			//pop an add to postfix the popped values until we find an opening bracket or until the stack gets empty
 			while((s.top()!='(') && (!s.empty()))
 			{
 				char temp=s.top();
 				postfix+=temp;
 				s.pop();
 			}
+
+			//If Stack top is empty, pop
 			if(s.top()=='(')
 			{
 				s.pop();
 			}
 		}
+
+		//If infix character is an Operator, fall into this  if block
 		else if(isOperator(infix[i]))
 		{
+			//If stack is empty, put the char in the stack
 			if(s.empty())
 			{
 				s.push(infix[i]);
 			}
+
+
 			else
 			{
+				//Precedence of character in the infix string is greater than that of the stack top element, push the character on the stack
 				if(precedence(infix[i])>precedence(s.top()))
 				{
 					s.push(infix[i]);
 				}	
+
+				//If precedence equals, then also push or if infix char is exponent character
 				else if((precedence(infix[i])==precedence(s.top()))&&(infix[i]=='^'))
 				{
 					s.push(infix[i]);
 				}
+
+
+				//Pop until the stack gets empty or the precedence of the infix char is smaller than or equal to the precedence of top stack element
 				else
 				{
 					while((!s.empty())&&( precedence(infix[i])<=precedence(s.top())))
@@ -74,6 +89,8 @@ string InfixToPostfix(stack<char> s, string infix)
 			}
 		}
 	}
+
+	//Pop an append the remaining stack characters
 	while(!s.empty())
 	{
 		postfix+=s.top();
