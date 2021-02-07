@@ -20,7 +20,7 @@ __Types of Binary Tree:__
 
 
 
-##If using array implementation, the following formula is useful : ***(ONLY USED IN CASE OF A COMPLETE BINARY TREE)***
+## If using array implementation, the following formula is useful : ***(ONLY USED IN CASE OF A COMPLETE BINARY TREE)***
 
 For any index i:
 - the left child is at index 2i+1;
