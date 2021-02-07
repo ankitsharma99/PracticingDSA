@@ -27,8 +27,8 @@ For any index i:
 - the right child is  at index 2i+2;
 
 
-# HEIGHT OF AN EMPTY TREE = -1
-# HEIGHT OF A TREE WITH ONE NODE = 0
+###### HEIGHT OF AN EMPTY TREE = -1
+###### HEIGHT OF A TREE WITH ONE NODE = 0
 
 
 ### Number of trees formed by 'n' number of nodes is given by the formula:
