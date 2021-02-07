@@ -19,7 +19,6 @@ void Create(Queue *q1, int size){
 void enqueue(Queue *q1, int x){
     if(q1->rear == q1->size-1){
         cout<<"Queue is Full";
-        
     }
     else
     {
