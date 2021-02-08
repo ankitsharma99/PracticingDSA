@@ -74,6 +74,29 @@ void LevelLineTraversal(Node * root){
     }
 }
 
+
+//Yet another line by line traversal
+void LevelLineTraversal2(Node *root){
+    queue<Node *> q2;
+
+    if(root == nullptr) return;
+
+    q2.push(root);
+    while(!q2.empty()){
+        int count = q2.size();
+
+        for(int i = 0; i<count; i++){
+            Node *curr = q2.front();
+            q2.pop();
+            cout<<curr->data<<"\t";
+
+            if(curr->left != nullptr) q2.push(curr->left);
+            if(curr->right != nullptr) q2.push(curr->right);
+        }
+        cout<<"\n";
+    }
+}
+
 int main(int argc, char const *argv[])
 {
 
@@ -88,7 +111,7 @@ int main(int argc, char const *argv[])
     root->right->right->left = new Node(69);
 
 
-    LevelLineTraversal(root);
+    LevelLineTraversal2(root);
     
 
 }
