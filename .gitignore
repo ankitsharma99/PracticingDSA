@@ -1,2 +1,5 @@
 #All the generated exe files:
 *.exe
+
+#All txt files:
+*.txt
