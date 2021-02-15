@@ -45,9 +45,10 @@ int main(int argc, char const *argv[])
     root->right->right = new Node(60);
     root->right->left = new Node(70);
     root->right->left->left = new Node(80);
-    root->right->left->left->left = new Node(90);
+    // root->right->left->left->left = new Node(90);
 
-    cout<<isBalanced(root);
+    if(isBalanced(root) > 1) cout<<"BALANCED";
+    else cout<<" NOT BALANCED";
 
 
     return 0;

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
+char square[10] = {'0','1','2','3','4','5','6','7','8','9'};
 
 int checkwin()
 {
@@ -39,7 +39,7 @@ int checkwin()
 }
 void myBoard()
 {
-    system("cls");
+    // system("cls");
     cout << "\n\n\tTic Tac Toe\n\n";
 
     cout << "Player 1 (X)  -  Player 2 (0)" << endl << endl;
