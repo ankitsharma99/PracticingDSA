@@ -31,14 +31,8 @@ long long binpow2(long long a, long long b) {
  
 int main(int argc, char const *argv[])
 {
-	#ifndef ONLINE_JUDGE
-		freopen("input.txt", "r", stdin);
-
-		freopen("output.txt", "w", stdout);
-	#endif // ONLINE_JUDGE
-
-		// int a= 78789; int b = 2;
-	cout<<5 & 5;
+	
+	cout<<binpow(2, 3);
 		
 	return 0;
 }
