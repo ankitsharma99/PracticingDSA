@@ -31,8 +31,14 @@ long long binpow2(long long a, long long b) {
  
 int main(int argc, char const *argv[])
 {
-	
-	cout<<binpow(2, 3);
+	int t;
+    cin>>t;
+	string str;
+    while(t != 0){
+        getline(cin, str);
+        cout<<str;
+        t--;
+    }
 		
 	return 0;
 }
